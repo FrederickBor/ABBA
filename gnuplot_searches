@@ -1,0 +1,23 @@
+set title "Búsqueda (Mejor Caso)"
+#set title "Búsqueda (Caso Promedio)"
+#set title "Búsqueda (Caso Crítico)"
+set ylabel "Tiempo (ns)"
+set xlabel "Número de operaciones"
+set yrange [0:1000]
+set grid
+set style line 1 \
+    linecolor rgb '#0060ad' \
+    linetype 1 linewidth 2 \
+    pointtype 0 pointsize 1.5
+set style line 2 \
+    linecolor rgb '#dd181f' \
+    linetype 1 linewidth 2 \
+    pointtype 0 pointsize 1.5
+set style line 3 \
+    linecolor rgb '#17FF00' \
+    linetype 1 linewidth 2 \
+    pointtype 0 pointsize 1.5
+
+plot 'Ficheros/searchesMejor.dat' index 0 with linespoints linestyle 1 title "Mejor Caso"
+#plot 'Ficheros/searchesPromedio.dat' index 0 with linespoints linestyle 2 title "Caso Promedio"
+#plot 'Ficheros/searchesCritico.dat' index 0 with linespoints linestyle 3 title "Caso Crítico"
